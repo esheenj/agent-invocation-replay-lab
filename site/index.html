@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1410">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Rehearse agent invocations safely: inspect duplicate requests, approvals, cost-unit budgets, expirations and revocations offline.">
+<title>Agent Invocation Replay Lab — Esheen Labs</title>
+<link rel="stylesheet" href="./style.css"><script type="module" src="./app.mjs"></script>
+</head><body>
+<a class="skip" href="#workbench">Skip to workbench</a>
+<div class="shell">
+ <header class="masthead"><a class="brand" href="https://github.com/esheenj/agent-invocation-replay-lab" rel="noopener noreferrer"><span class="brand-mark">Σ</span><span>SIGMA <b>/ LABS</b><small>OPEN INTELLIGENCE</small></span></a><div class="status"><span class="status-dot"></span> OFFLINE MODE <span class="tag">MVP / 013</span></div></header>
+ <main>
+  <section class="intro">
+    <div class="overline"><span class="bar"></span> Agent engineering / Decision integrity</div>
+    <h1>Replay the request.<br><em>Understand the decision.</em></h1>
+    <p>Watch fictional agent requests move through approval, capability, expiry, budget and duplicate checks. Inspect every verdict before you apply similar controls to real systems.</p>
+    <div class="meta"><span>NO LIVE ACTIONS</span><span>NO REMOTE WORKERS</span><span>DETERMINISTIC OUTPUT</span></div>
+  </section>
+  <section class="workspace" id="workbench" aria-labelledby="work-title">
+   <div class="section-top"><div><span class="overline">01 / WORKSPACE</span><h2 id="work-title">Invocation journal</h2></div><button type="button" id="reset" class="secondary">Restore example ↗</button></div>
+   <div class="panel">
+    <div class="panel-top"><label for="scenario">Scenario JSON</label><span>POLICY + EVENT SEQUENCE</span></div>
+    <textarea id="scenario" aria-describedby="editor-hint" spellcheck="false"></textarea>
+    <div class="panel-actions"><p id="editor-hint">Edit a fictional policy and ordered event journal. Nothing leaves your browser. Maximum 1 MiB.</p><button type="button" id="run" class="primary">Run local replay <span aria-hidden="true">→</span></button></div>
+   </div>
+  </section>
+  <section class="report" aria-labelledby="report-title">
+   <div class="section-top"><div><span class="overline">02 / RESULTS</span><h2 id="report-title">Decision evidence</h2></div><span id="state" class="pill" role="status" aria-live="polite">READY</span></div>
+   <div class="metrics">
+    <div><span class="metric-label">EVENTS REVIEWED</span><strong id="events">—</strong></div>
+    <div><span class="metric-label">SIMULATED ADMISSIONS</span><strong id="admitted">—</strong></div>
+    <div><span class="metric-label">HELD / DENIED / REPLAY</span><strong id="rejected">—</strong></div>
+    <div><span class="metric-label">COST UNITS USED</span><strong id="cost">—</strong></div>
+   </div>
+   <p id="result-message" class="result-message">Run the example to inspect each admission, hold or rejection.</p>
+   <div class="log-header"><span>SEQUENCE / REQUEST</span><span>DECISION / REASON</span></div>
+   <ol class="decisions" id="decisions" aria-live="polite"></ol>
+   <div class="report-end"><span>ILLUSTRATIVE DATA ONLY • NOT EXECUTION EVIDENCE</span><button id="export" class="secondary" type="button" disabled>Export evidence JSON ↓</button></div>
+  </section>
+  <section class="why">
+   <div><span class="overline">03 / LIMITS</span><h2>Clarity before<br>autonomy.</h2></div>
+   <p>Each decision is calculated in your browser, not by a real broker, provider or agent. Names and approvals are self-declared fictional inputs. The sandbox neither verifies identities nor prevents real-world execution. Treat the report as a repeatable design aid, not a security attestation.</p>
+  </section>
+ </main>
+ <footer><span>© 2026 ESHEEN LABS · OPEN SOURCE</span><div><a href="https://esheenj.github.io/compound-intelligence-starter/" rel="noopener noreferrer">Explore Labs</a><a href="https://github.com/esheenj/agent-invocation-replay-lab" rel="noopener noreferrer">Source &amp; tests ↗</a></div></footer>
+</div>
+</body></html>

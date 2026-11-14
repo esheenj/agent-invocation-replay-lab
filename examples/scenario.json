@@ -1,0 +1,21 @@
+{
+  "policy": {
+    "allowedTools": ["search_knowledge", "propose_payment"],
+    "allowedActors": ["research_agent", "finance_agent", "human_reviewer"],
+    "approvalRequiredTools": ["propose_payment"],
+    "maxCostUnits": 10,
+    "maxEventAgeMs": 60000,
+    "sessionEnd": "2026-01-01T15:00:00Z"
+  },
+  "events": [
+    {"eventId":"ev-1","kind":"invoke","requestId":"req-1","actor":"research_agent","at":"2026-01-01T10:00:00Z","tool":"search_knowledge","costUnits":2},
+    {"eventId":"ev-2","kind":"invoke","requestId":"req-1","actor":"research_agent","at":"2026-01-01T10:00:01Z","tool":"search_knowledge","costUnits":2},
+    {"eventId":"ev-3","kind":"invoke","requestId":"req-2","actor":"finance_agent","at":"2026-01-01T10:00:02Z","tool":"propose_payment","costUnits":3},
+    {"eventId":"ev-4","kind":"approve","requestId":"req-2","actor":"finance_agent","approvedBy":"human_reviewer","at":"2026-01-01T10:00:03Z","tool":"propose_payment"},
+    {"eventId":"ev-5","kind":"invoke","requestId":"req-2","actor":"finance_agent","at":"2026-01-01T10:00:04Z","tool":"propose_payment","costUnits":3},
+    {"eventId":"ev-6","kind":"invoke","requestId":"req-3","actor":"research_agent","at":"2026-01-01T10:00:05Z","tool":"unknown_tool","costUnits":1},
+    {"eventId":"ev-7","kind":"invoke","requestId":"req-4","actor":"research_agent","at":"2026-01-01T10:00:06Z","tool":"search_knowledge","costUnits":9},
+    {"eventId":"ev-8","kind":"revoke","requestId":"req-5","actor":"human_reviewer","at":"2026-01-01T10:00:07Z"},
+    {"eventId":"ev-9","kind":"invoke","requestId":"req-5","actor":"research_agent","at":"2026-01-01T10:00:08Z","tool":"search_knowledge","costUnits":1}
+  ]
+}
