@@ -1,5 +1,12 @@
 # Agent Invocation Replay Lab
 
+**Public product definition:** an **agent request replay and decision-journal playground** for developers testing fictional event sequences. It shows how duplicate IDs, approvals, tool/actor allowlists, session cost units, time windows and revocation affect simulated decisions—not actual tool execution.
+
+**For AI integration and QA teams:** recreate a failure path using invented events, inspect the deterministic decision journal and compare policy expectations before implementing production controls. **Try:** [the browser replay lab](https://esheenj.github.io/agent-invocation-replay-lab/). **Complementary demo:** [Agent Capability Policy Lab](https://esheenj.github.io/agent-capability-policy-lab/) for enrollment and permission decisions.
+
+**Possible professional follow-through:** a separately scoped Sigma Code review could examine testing strategy, idempotency boundaries and human-approval design. No production agency, verified agent identity, real approval workflow, certified security result or active paid engagement is implied. The existing repository, MIT license, source contracts and URLs remain unchanged.
+
+
 **Replay the request. Understand the decision.**
 
 A free, offline agent engineering sandbox that deterministically replays fictional tool requests through capability, approvals, time, idempotency, revocation and per-session cost-unit controls. It makes disagreements and failure states visible without executing any agent tools.
